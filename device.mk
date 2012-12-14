@@ -197,6 +197,53 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
 	e2fsck \
 	setup_fs
+	
+#Build Prop addons
+PRODUCT_PACKAGES += \
+dalvik.vm.heapstartsize=48m
+dalvik.vm.heapgrowthlimit=128m
+dalvik.vm.heapsize=384m
+dalvik.vm.execution-mode=int:jit
+dalvik.vm.dexopt-flags=v=n,o=v,u=n,m=y
+dalvik.vm.lockprof.threshold=850
+dalvik.vm.verify-bytecode=false
+ro.kernel.android.checkjni=0
+ro.media.enc.jpeg.quality=100
+debug.sf.hw=1
+debug.performance.tuning=1
+video.accelerate.hw=1
+persist.sys.purgeable_assets=1
+windowsmgr.max_events_per_sec=600
+pm.sleep_mode=1
+ro.HOME_APP_ADJ=1
+persist.sys.use_dithering=0
+ro.media.dec.jpeg.memcap=8000000
+ro.media.enc.hprof.vid.bps=8000000
+ro.media.enc.hprof.vid.fps=65
+ro.config.nocheckin=1
+ring.delay=0
+ro.telephony.call_ring.delay=50
+ro.lge.proximity.delay=20
+mot.proximity.delay=20
+ro.config.hwfeature_wakeupkey=0
+ro.ext4fs=1
+debug.composition.type=gpu
+ro.mot.eri.losalert.delay=900
+ro.ril.fast.dormancy.rule=0
+ro.max.fling_velocity=18000
+ro.min.fling_velocity=10000
+movfilter=40
+movehyst=0
+per_sec=300
+TCHTHR=28
+ro.semc.xloud.supported=true
+persist.service.xloud.enable=1
+ro.semc.sound_effects_enabled=true
+ro.service.swiqi.supported=true
+persist.service.swiqi.enable=1
+dalvik.vm.heaptargetutilization=0.75
+dalvik.vm.heapminfree=512k
+dalvik.vm.heapmaxfree=8m	
 
 $(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
 
